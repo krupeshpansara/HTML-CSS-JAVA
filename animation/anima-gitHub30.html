@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: black;
+        }
+        .box{
+            position: relative;
+            background: black;
+            width: 250px;
+            height: 300px;
+            border-radius: 10px;
+
+        }
+        .box::after{
+            content: '';
+            position: absolute;
+            top: -2px;
+            right: -2px;
+            left: -2px;
+            bottom: -2px;
+            z-index: -1;
+        }
+        .box::before{
+            content: '';
+            position: absolute;
+            top: -2px;
+            right: -2px;
+            left: -2px;
+            bottom: -2px;
+            z-index: -2;
+            filter: blur(50px);
+        }
+        .box::after,
+        .box::before{
+            background: linear-gradient(45deg , red ,rgb(255, 115, 0),black, black ,black,rgb(73, 128, 0), green);
+            border-radius: 12px;
+        }
+        h1{
+            display: inline-block;
+            justify-content: center;
+            position: relative;
+            font-size: 2em;
+            color: white;
+            padding-top: 30px ;
+            padding-left: 30px ;
+
+        }
+        .word{
+            color: white;
+            padding: 30px 10px 0px 10px;
+            display: grid;
+            row-gap: normal;
+            
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h1>glowing box</h1>
+        <div class="word">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore facere quo cupiditate recusandae dolorem
+            distinctio odit fugiat reprehenderit amet neque?istinctio odit fugiat reprehenderit amet neque?istinctio odit fugiat reprehenderit amet neque?</div> 
+    </div>
+</body>
+
+</html>

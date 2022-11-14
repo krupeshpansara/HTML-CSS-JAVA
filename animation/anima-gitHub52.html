@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #edf1f4;
+        }
+        .loader{
+            display: flex;
+            flex-direction: row;
+        }
+        .loader .loader_box{
+            width: 40px;
+            height: 200px;
+            position: relative;
+            box-shadow: 15px 15px 20px rgba(0,0,0,0.2),
+                        -15px -15px 20px white,
+                        inset -5px -5px 5px rgba(255,255,255,0.5),
+                        inset 5px 5px 5px rgba(0,0,0,0.05);
+            
+            margin: 0 25px;
+            border-radius: 40px;
+            border: 2px solid rgba(255,255,255,0.4);
+        background: linear-gradient(to bottom, rgba(0,0,0,0.05) , #edf1f4);
+            overflow: hidden;
+        }
+        .loader .loader_box::before{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 40px;
+
+            top: 0;
+            left: 0;
+            box-shadow: 15px 15px 20px rgba(0,0,0,0.1),
+                        -15px -15px 20px white,
+                        inset -5px -5px 5px rgba(255,255,255,0.5),
+                        inset 5px 5px 5px rgba(0,0,0,0.05);
+            z-index: 10;
+        }
+        .loader .loader_box::after{
+            content: '';
+            position: absolute;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            top: 0;
+            left: 0;
+            background: #f3f9fd;
+            box-shadow: inset -5px -5px 8px rgba(0,0,0,0.2),
+                        0 420px 0 400px #44a8fa,
+                        0 -420px 0 400px #d7eaf8;
+                        color: #3ca2f57e;
+            animation: animeA 2.5s ease-in-out infinite;
+            animation-delay: calc(0.3s* var(--i));
+            transform: translateY(160px);
+            animation-play-state: running;
+        }
+        @keyframes animeA {
+            0%, 100%{
+                transform: translateY(160px);
+                filter: hue-rotate(360deg);
+            }
+            50%{
+                transform: translateY(0);
+            }
+            100%{
+                filter: hue-rotate(0deg);
+            }
+        }
+        body.A-on .boxA::after,
+        body.B-on .boxB::after,
+        body.C-on .boxC::after,
+        body.D-on .boxD::after,
+        body.E-on .boxE::after{
+            animation-play-state: paused;
+        }
+        .tex{
+            position: absolute;
+            top: 15vh;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="loader">
+        <div style="--i:0" class="loader_box boxA"></div>
+        <div style="--i:1" class="loader_box boxB"></div>
+        <div style="--i:2" class="loader_box boxC"></div>
+        <div style="--i:3" class="loader_box boxD"></div>
+        <div style="--i:4" class="loader_box boxE"></div>
+    </div>
+    <div class="tex">Click any One</div>
+
+
+
+    <script>
+        let body = document.querySelector('body');
+
+
+        let boxA = document.querySelector('.boxA');
+        boxA.onclick = function() {
+            body.classList.toggle('A-on');
+        }
+
+        let boxB = document.querySelector('.boxB');
+        boxB.onclick = function() {
+            body.classList.toggle('B-on');
+        }
+
+        let boxC = document.querySelector('.boxC');
+        boxC.onclick = function() {
+            body.classList.toggle('C-on');
+        }
+
+        let boxD = document.querySelector('.boxD');
+        boxD.onclick = function() {
+            body.classList.toggle('D-on');
+        }
+
+        let boxE = document.querySelector('.boxE');
+        boxE.onclick = function() {
+            body.classList.toggle('E-on');
+        }
+    </script>
+
+</body>
+</html>

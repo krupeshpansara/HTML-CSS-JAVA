@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            /* background: rgba(0,0,0,0.2); */
+            background: url("../form/imge/img1.png");
+        }
+        .login_form{
+            width: 370px;
+            height: 450px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.1),
+            5px 5px 25px rgba(0,0,0,0.3);
+            background: rgba(255,255,255,0.3);
+            border: 3px solid rgba(255,255,255,0.8);
+            border-bottom-color: rgba(0,0,0,0.1) ;
+            border-right-color: rgba(0,0,0,0.1) ;
+        }
+        h1{
+            /* text-align: center; */
+            margin: 30px 0px 30px 25px;
+            font-weight: 500;
+        }
+        form{
+            margin-left: 25px;
+        }
+        .forgot{
+            text-decoration: none;
+            position: relative;
+            top: 50px;
+            left: 200px;
+            color: rgb(0, 100, 255);
+        }
+        .btn{
+            width: 92%;
+            height: 40px;
+            background: red;
+            margin: 70px 0px 0px 0px;
+            border-color: transparent;
+            color: white;
+            font-size: 1.2em;
+        }
+        .btn:active{
+            background: rgb(167, 0, 0);
+        }
+        .help{
+            text-decoration: none;
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            /* color: white; */
+        }
+        .help a{
+            margin-right: 25px; 
+            margin-top: 20px;
+            text-decoration: none; 
+            color: rgba(0,0,0,0.5);
+        }
+        .help a:hover{
+            color: red;
+        }
+        .sing_in{
+            text-align: center;
+            margin-left: -20px;
+            margin-top: 10px;
+            font-size: 1em;
+            color: rgba(0,0,0,0.8);
+        }
+        input{
+            background: transparent;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="login_form">
+        <h1>Log In</h1>
+        <form action="log_in.js" method="get">
+            <div style="margin-top: 60px;">
+                <input type="tel" name="uEmail" id="" placeholder="Mobile No." style="width: 92%; height: 30px; border-color: transparent; border-bottom: 2px solid rgba(0,0,0,0.5) ;">
+            </div>
+            <div style="margin-top: 40px;">
+                <input type="password" name="uPassword" id="" placeholder="Password" style="width: 92%; height: 30px; border-color: transparent; border-bottom: 2px solid rgba(0,0,0,0.5);">
+            </div>
+
+            <a href="#" class="forgot">Forgot Password?</a>
+
+            <div>
+                <input type="submit" value="Login" class="btn">
+            </div>
+            <div class="help">
+                <a href="#">Need help?</a>
+            </div>
+
+            <div class="sing_in">
+                are you <a href="sing_in.html" style=" color: red; font-weight: 500;">Sing In</a> ?
+            </div>
+        </form>
+    </div>
+</body>
+</html>

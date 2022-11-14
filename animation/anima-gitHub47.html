@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            display: flex;
+            background: rgb(231, 230, 230);
+            overflow: hidden;
+        }
+        
+        .btn{
+            width: 40px;
+            height: 40px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            border-radius: 50%;
+            position: absolute;
+            z-index: 1;
+            top: 10px;
+            left: 10px;
+        }
+        .btn_icon_off , .btn_icon_on{
+            font-size: 1.7em;
+            transform-origin: center;
+            position: absolute;
+            transform-style: linear;
+        }
+        .btn_icon_on{
+            opacity: 0;
+        }
+        body.on .btn_icon_off{
+            opacity: 0;
+        }
+        body.on .btn_icon_on{
+            opacity: 1;
+        }
+        .index{
+            width: 100vw;
+            height: 100vh;
+            background: red;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            right: 100vw;
+            transition-duration: 0.5s;
+        }
+        body.on .index{
+            right: 0vw;
+        }
+        li{
+            list-style: none;
+            font-size: 2em;
+            margin: 10px 0px;
+            font-weight: 900;
+            opacity: 0;
+            transition-duration: 0.4s;
+            color: white;
+            transform-style: linear;
+            letter-spacing: 0px;
+            position: relative;
+            right: 50%;
+        }
+        body.on li{
+            opacity: 1;
+            right: 0%;
+        }
+        .index li:nth-child(1){
+            transition-delay: 0.2s;
+        }
+        .index li:nth-child(2){
+            transition-delay: 0.3s;
+        }
+        .index li:nth-child(3){
+            transition-delay: 0.4s;
+        }
+        .index li:nth-child(4){
+            transition-delay: 0.5s;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="btn">
+        <ion-icon name="menu-outline" class="btn_icon_off"></ion-icon>
+        <ion-icon name="close-outline" class="btn_icon_on"></ion-icon>
+    </div>
+    <div class="index">
+        <li>HOME</li>
+        <li>ABOUT</li>
+        <li>CONTECT</li>
+        <li>USER</li>
+    </div>
+    <script>
+        let btn = document.querySelector('.btn');
+        let body = document.querySelector('body');
+        btn.onclick = function () {
+            body.classList.toggle('on')
+        }
+
+    </script>
+
+</body>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</html>

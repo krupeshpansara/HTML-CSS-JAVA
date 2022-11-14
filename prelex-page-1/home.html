@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://font.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+
+        :root {
+            --color: #094b65;
+        }
+
+
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            overflow-x: hidden;
+            background: white;
+            min-height: 100vh;
+        }
+
+        .header {
+            width: 100%;
+            position: sticky;
+            top: 0;
+            left: 0;
+            padding: 30px 100px;
+            display: flex;
+            justify-content: space-between;
+            z-index: 100000;
+        }
+
+        .logo {
+            font-size: 2em;
+            font-weight: 700;
+            /* color: calc( var(--color)); */
+            color: #01374d;
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        ul li {
+            list-style: none;
+            margin-left: 20px;
+        }
+
+        ul li .box {
+            text-decoration: none;
+            padding: 6px 15px;
+            font-size: 1em;
+            font-weight: 600;
+            color: #01374d;
+            border-radius: 20px;
+        }
+
+        ul li .box:hover {
+            background: #01374d;
+            color: white;
+        }
+
+        .boxA {
+            background: #01374d;
+            color: white;
+            text-decoration: none;
+            padding: 6px 15px;
+            font-size: 1em;
+            font-weight: 600;
+            /* color: #094b65; */
+            border-radius: 20px;
+        }
+
+        section {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* overflow: hidden ; */
+        }
+
+        section::after {
+            content: '';
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(to top, #094b65, transparent);
+        }
+
+        section img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            object-fit: cover;
+        }
+
+        .text {
+            position: absolute;
+            color: #094b65;
+            font-size: 10vw;
+            text-align: center;
+            line-height: 0.55em;
+            font-family: 'Rancho', cursive;
+            transform: translateY(-40px);
+        }
+
+        span {
+            font-size: 0.2em;
+            letter-spacing: 2px;
+            font-weight: 400;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .btn {
+            text-decoration: none;
+            display: inline-block;
+            padding: 8px 30px;
+            background: rgb(255, 255, 255);
+            color: #094b65;
+            font-size: 1.2em;
+            font-weight: 500;
+            letter-spacing: 2px;
+            border-radius: 40px;
+            transform: translateY(100px);
+        }
+
+        .sec {
+            position: relative;
+            padding: 0px 100px;
+            background: #094b65;
+            /* text-align: center; */
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 3.2em;
+            font-weight: 600;
+            color: white;
+        }
+
+        p {
+            color: white;
+            font-size: 1em;
+            margin-top: 20px;
+            padding-bottom: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">Jungle</div>
+
+        <ul>
+            <li> <a href="#" class="boxA">Home</a> </li>
+            <li> <a href="#" class="box">About</a> </li>
+            <li> <a href="#" class="box">Destination</a> </li>
+            <li> <a href="#" class="box">Contect</a> </li>
+        </ul>
+    </header>
+    <section>
+        <h2 class="text"><span>It's time for a new</span><br>Adventur</h2>
+        <img src="bird1.png" class="bird1">
+        <img src="forest.png" class="forest">
+        <img src="bird2.png" class="bird2">
+
+
+        <a href="#" class="btn">Explore</a>
+        
+        <img src="rocks.png" class="rocks">
+        <img src="water.png" class="water">
+
+
+    </section>
+    <div class="sec">
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam iusto ipsum in voluptatum vero quibusdam animi
+            labore debitis quod expedita. Repudiandae ipsum sit molestiae fugiat! Asperiores, animi quaerat similique ad
+            fugit placeat provident necessitatibus in repudiandae enim. Reprehenderit iste doloremque libero, quidem
+            perferendis expedita sequi minus mollitia quod aliquid illo magnam eos non doloribus ipsum aliquam? Totam,
+            architecto autem adipisci corporis corrupti suscipit ut ipsa explicabo. Dignissimos nisi veritatis modi
+            eaque natus laborum, iusto asperiores odit aut corrupti dolore ad ex, omnis architecto neque fugiat. Quas
+            cum vel voluptatem optio at, vero eligendi. Accusantium corporis, aut consectetur, ea et magnam earum, dicta
+            numquam adipisci dolore ut? Minima earum laboriosam similique eius! <br><br> Assumenda nulla saepe, odit
+            consectetur,totam explicabo, iste fuga quibusdam molestiae expedita facere nemo exercitationem at non
+            similique libero
+            nihil voluptatum doloribus impedit eius veritatis! Nesciunt iusto tempore dicta at maxime tenetur recusandae
+            aliquam numquam. Et, labore sint a consequatur accusantium id sequi laudantium dolorem, voluptas veritatis
+            omnis! Natus architecto ea quidem deleniti et, cumque minima hic, esse, quod fuga nulla iusto voluptatum
+            pariatur! Qui, laboriosam perspiciatis? Ea debitis ipsum ut neque maxime cum cumque. Sapiente cupiditate ab
+            praesentium, iure velit ipsa voluptates quos, quibusdam at numquam pariatur aliquam consequatur veritatis
+            voluptatem similique quo accusantium autem aperiam aspernatur. Amet, illo unde nobis debitis fuga dolor
+            earum delectus tempora culpa velit maxime alias ipsam blanditiis iure beatae voluptatibus reprehenderit
+            temporibus similique porro. Maiores iste ut cum, at asperiores illum maxime et amet, fuga nisi commodi
+            delectus velit ducimus voluptate esse consequatur modi quibusdam ipsa laudantium veritatis quo ab? Labore
+            dolore, consequatur tenetur magnam sed consectetur impedit <br><br> inventore autem placeat voluptate quidem
+            expedita. Tenetur nisi natus asperiores labore, sed voluptate, sunt officiis facere aspernatur ad impedit
+            quisquam atque minima velit, magni quo. Consequuntur magni nesciunt enim cumque minus, natus quas
+            perferendis explicabo autem dolorum totam velit in inventore eaque. Qui corrupti iusto provident maxime
+            dolore obcaecati illum tempore <br><br> modi, hic repellat incidunt rerum assumenda? Quis quas, consequuntur
+            magnam,
+            esse iste maxime harum sequi corporis quia laudantium nesciunt eaque quos mollitia alias. Ipsum numquam quo
+            impedit, laudantium officia eum minus nulla alias dolore qui eveniet porro, commodi vero, rem voluptate
+            eligendi harum fugiat velit non cumque. Atque laborum aperiam iste? Amet dolor ipsa sed corporis ipsam
+            tenetur blanditiis autem cumque ducimus! Quia, sint assumenda quaerat esse necessitatibus fugit ut eligendi
+            minima dolores aperiam, vitae fugiat odit corrupti eveniet tempore ipsum pariatur amet. Lorem ipsum dolor
+            sit amet, consectetur adipisicing elit. Quae, at vitae deleniti voluptatum optio natus laboriosam alias
+            quidem, magnam illo distinctio veniam <br><br> expedita pariatur doloribus perspiciatis similique et ratione
+            fugit Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe magnam provident incidunt libero
+            voluptate dolorem quae? Illum earum possimus et temporibus, id accusamus provident. Fugiat earum explicabo
+            nobis itaque dolorum!</p>
+    </div>
+
+    <script>
+        let text = document.querySelector('.text');
+        let bird1 = document.querySelector('.bird1');
+        let bird2 = document.querySelector('.bird2');
+        let btn = document.querySelector('.btn');
+        let rocks = document.querySelector('.rocks');
+        let forest = document.querySelector('.forest');
+        let water = document.querySelector('.water');
+        // let header = document.querySelector('.header');
+
+        window.addEventListener('scroll', function () {
+            let value = window.scrollY;
+
+            text.style.top = 50 + value * -0.5 + '%';
+            bird1.style.top = value * -1.5 + 'px';
+            bird1.style.left = value * 2 + 'px';
+            bird2.style.top = value * -1.5 + 'px';
+            bird2.style.left = value * -5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            rocks.style.top = value * -0.12 + 'px';
+            forest.style.top = value * 0.25 + 'px';
+        })
+    </script>
+</body>
+
+</html>

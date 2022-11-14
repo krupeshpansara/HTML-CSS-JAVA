@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100vw;
+        }
+        .box{
+            width: 100vw;
+            height: 100vh;
+            background: rgb(32, 33, 49);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .box::after{
+            content: ' ';
+            width: 400px;
+            height: 400px;
+            background: linear-gradient(red , orange);
+            position: absolute;
+            border-radius: 50%;
+            top: 100px;
+            left: 270px;
+            transition-duration: 1s;
+        }
+        body.color_A_on .box::after{
+            background: linear-gradient(red , orange);
+        }
+        body.color_B_on .box::after{
+            background: linear-gradient(rgb(250, 36, 71) , rgb(89, 89, 250));
+
+        }
+        .box::before{
+            content: ' ';
+            width: 300px;
+            height: 300px;
+            background: linear-gradient( rgb(0, 247, 255) ,rgb(0, 255, 0) );
+            position: absolute;
+            border-radius: 50%;
+            bottom: 20px;
+            right: 330px;
+        }
+        .glass{
+            width: 350px;
+            height: 500px;
+            background: rgba(255,255,255,0.06);
+            position: relative;
+            z-index: 1;
+            border-radius: 10px;
+            border: 1px solid rgba(255,255,255,0.5);
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            border-right: 1px solid rgba(255,255,255,0.3);
+            backdrop-filter: blur(20px) ;
+            box-shadow: 0px 25px 50px rgba(0,0,0,0.4);
+            display: flex;
+            justify-content: center;
+        }
+        img{
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background-size: cover;
+            margin-top: 50px;
+        }
+        .light{
+            width: 8px;
+            height: 8px;
+            background: rgba(0,0,0,0.1);
+            border-radius: 50%;
+            position: absolute;
+            top: 10px;
+            box-shadow: 1px 1px 2px rgba(0,0,0,0.9),
+            inset -1px -1px 3px rgba(255, 255, 255, 0.1);
+            transition-duration: 0.5s;
+        }
+        body.on .light{
+            box-shadow: 0px 0px 1px rgb(250, 138, 138),
+            0px 0px 5px rgb(250, 117, 117),
+            0px 0px 10px rgb(250, 68, 68),
+            0px 0px 20px rgb(248, 0, 0);
+            background: rgb(255, 52, 52);
+        }
+        body.mute .light{
+            box-shadow: 0px 0px 1px rgb(159, 245, 125),
+            0px 0px 5px rgb(114, 233, 67),
+            0px 0px 10px rgb(135, 247, 90),
+            0px 0px 20px rgb(135, 247, 90);
+            background: rgb(72, 255, 0);
+        }
+        .on_btn , .mute_btn{
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: transparent;
+            border-radius: 50%;
+            position: relative;
+            top: 60px;
+            box-shadow: 2px 2px 3px rgba(0,0,0,0.3),
+            inset 1px 1px 4px rgba(255, 255, 255, 0.1);
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+        .on_btn::before , .mute_btn::before{
+            content: ' ';
+            width: 0px;
+            height: 0px;
+            position: absolute;
+            border-radius: 50%;
+            box-shadow: 2px 2px 3px rgba(0,0,0,0.1),
+            inset 2px 2px 5px rgba(247, 242, 0, 0.2);
+            transition-duration: 0.5s;
+        }
+        .on_btn::before{
+            background: red;
+        }
+        .mute_btn::before{
+            background: rgb(1, 102, 1);
+
+        }
+        body.on .on_btn::before , body.mute .mute_btn::before{
+            width: 30px;
+            height: 30px;
+        }
+        .icon{
+            color: white;
+            transition-duration: 0.5s;
+        }
+        body.on .on_btn_icon , body.mute .mute_btn_icon{
+            color: black;
+        }
+        .btn_box{
+            width: 160px;
+            height: 200px;
+            position: absolute;
+            display: grid;
+            grid-template-columns: 65px 65px 65px;
+            top: 180px;
+        }
+        .smoll_btn{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.4),
+                        inset -1px -1px 3px rgba(0, 0, 0, 0.1),
+                        inset 1px 1px 3px rgba(255, 255, 255, 0.1);
+            color: white;
+            cursor: pointer;
+            
+        }
+        .smoll_btn:active{
+            box-shadow: inset -1px -1px 3px rgba(255, 255, 255, 0.1),
+                        inset 1px 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        .color_box_A{
+            position: absolute;
+            top: 290px;
+            left: 200px;
+            
+        }
+        .red_orange , .pink_blue{
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 3px solid whitesmoke;
+        }
+        .red_orange {
+            background: linear-gradient(red , orange);
+            margin-bottom: 10px;
+        }
+        .pink_blue{
+            background: linear-gradient(rgb(250, 36, 71) , rgb(89, 89, 250));
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="glass">
+            <div class="light"></div>
+            <div class="on_btn"><ion-icon name="power-outline" class="on_btn_icon icon"></ion-icon></div>
+            <div class="mute_btn"><ion-icon name="volume-mute-outline" class="mute_btn_icon icon"></ion-icon></div>
+
+            <div class="btn_box">
+                <div class="btn_A smoll_btn">1</div>
+                <div class="btn_B smoll_btn">2</div>
+                <div class="btn_C smoll_btn">3</div>
+                <div class="btn_D smoll_btn">4</div>
+                <div class="btn_E smoll_btn">5</div>
+                <div class="btn_F smoll_btn">6</div>
+                <div class="btn_G smoll_btn">7</div>
+                <div class="btn_H smoll_btn">8</div>
+                <div class="btn_I smoll_btn">9</div>
+                
+            </div>
+        </div>
+
+        <div class="color_box_A">
+            <div class="pink_blue"></div>
+        </div>
+    </div>
+
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+<script>
+    let body = document.querySelector('body');
+
+    let mute_btn = document.querySelector('.mute_btn');
+    mute_btn.onclick = function() {
+        body.classList.toggle('mute');
+    }
+
+    let on_btn = document.querySelector('.on_btn');
+    on_btn.onclick = function() {
+        body.classList.toggle('on');
+    }
+
+
+    let coler_B = document.querySelector('.pink_blue');
+    coler_B.onclick = function() {
+        body.classList.toggle('color_B_on');
+    }
+
+    let coler_A = document.querySelector('.red_orange');
+    coler_A.onclick = function() {
+        body.classList.toggle('color_A_on');
+    }
+    
+    
+</script>
+</body>
+</html>

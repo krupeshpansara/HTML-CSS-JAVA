@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            min-height: 200vh;
+            background: rgb(179, 255, 255);
+        }
+
+        .main {
+            /* border-radius: 20px; */
+            position: relative;
+            width: 60vw;
+            height: 160vh;
+            margin-top: 20vh;
+            display: flex;
+            justify-content: first baseline;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.9);
+        }
+
+        /* ********************************************************  box 1  ************************************************************* */
+        .parshnal {
+            /* background: rgb(42, 49, 70); */
+            background:linear-gradient(45deg , rgb(42, 49, 70) , rgb(27, 27, 92) , rgb(42, 49, 70));
+
+            height: 160vh;
+            width: 20vw;
+            display: inline-block;
+            /* border-bottom-left-radius: 20px;
+            border-top-left-radius: 20px; */
+
+        }
+
+        .contant {
+            width: 20vw;
+            height: 300px;
+            color: white;
+
+        }
+
+        .imge {
+            display: inline-block;
+            position: relative;
+            background-color:white ;
+            top: 20px;
+            left: 20%;
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            background-image: url('img.png');
+            background-size: 170px ;
+            background-position: center;
+        }
+
+        .name {
+
+            top: 30px;
+            left: 10%;
+            position: relative;
+            font-size: 2em;
+
+        }
+
+        .profeshan {
+            position: relative;
+            top: 30px;
+            left: 25%;
+            font-size: 1.5em;
+        }
+
+        hr {
+            background: black;
+            height: 1px;
+            width: 14vw;
+            position: relative;
+            left: 3vw;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .contect,
+        .education,
+        .languages {
+            padding-left: 20px;
+            font-size: 1.5em;
+            color: black;
+            padding-top: 50px;
+            color: white;
+
+        }
+
+        .contect_box {
+            width: 20vw;
+            /* height: 230px; */
+            padding-top: 10px;
+        }
+
+        .number_box,
+        .email_box,
+        .my_saite_box,
+        .location_box {
+            padding-left: 30px;
+            padding-top: 10px;
+            font-size: 1em;
+            color: white;
+
+        }
+
+        .info_icon {
+            padding-right: 10px;
+            font-size: 1.5em;
+            color: rgb(0, 195, 255);
+        }
+
+        .education_year {
+            padding-left: 30px;
+            padding-top: 15px;
+            /* font-style: italic; */
+            font-weight: 900;
+            font-size: 0.7em;
+            color: rgb(0, 195, 255);
+
+
+        }
+
+        .degree {
+            padding-left: 45px;
+            padding-top: 5px;
+            color: white;
+
+        }
+
+        .university {
+            padding-left: 45px;
+            font-weight: 500;
+            font-size: 0.7em;
+            color: white;
+
+        }
+
+        .english,
+        .spanish,
+        .hindi {
+            padding: 20px 0px 0px 30px;
+            font-size: 1em;
+            font-weight: 800;
+            color: white;
+
+        }
+
+        .languages_box1 {
+            position: absolute;
+            /* background: grey; */
+            background: rgb(0, 195, 255);
+            height: 4px;
+            width: 11vw;
+            margin-left: 30px;
+            margin-top: 5px;
+            box-shadow: 5vw 0vw 0px rgba(0, 0, 0, 0.5);
+
+        }
+
+        .languages_box2 {
+            position: absolute;
+            /* background: grey; */
+            background: rgb(0, 195, 255);
+            height: 4px;
+            width: 8vw;
+            margin-left: 30px;
+            margin-top: 5px;
+            box-shadow: 8vw 0vw 0px rgba(0, 0, 0, 0.5);
+        }
+
+        .languages_box3 {
+            position: absolute;
+            background: rgb(0, 195, 255);
+            height: 4px;
+            width: 14vw;
+            margin-left: 30px;
+            margin-top: 5px;
+            box-shadow: 2vw 0vw 0px rgba(0, 0, 0, 0.5);
+        }
+
+        /* ********************************************************  b0x 2  ********************************************************** */
+
+        .info {
+            /* border-bottom-right-radius: 20px;
+            border-top-right-radius: 20px; */
+            width: 40vw;
+            height: 160vh;
+            background: rgba(255, 255, 255, 0.6);
+            display: inline-block;
+            position: relative;
+        }
+
+        .profail {
+            width: 40vw;
+        }
+
+        .profile_1,
+        .experience_1,
+        .skills_1,
+        .interest_1 {
+            color: black;
+            font-size: 1.5em;
+            margin: 40px 0px 0px 40px;
+        }
+
+        .profile_box1,
+        .profile_box2 {
+            margin: 20px 40px 0px 40px;
+            color: black;
+            font-size: 0.9em;
+        }
+
+        .experience {
+            width: 40vw;
+        }
+
+        .experience_box1 {
+            width: 40vw;
+            height: 100px;
+            display: flex;
+            justify-content: first baseline;
+        }
+
+        .experience_boxA1 {
+            height: 100px;
+            width: 30vw;
+        }
+
+        .experience_year {
+            font-size: 1em;
+            font-weight: 700;
+            padding: 20px 0px 5px 40px;
+            color: darkblue;
+        }
+
+        .company {
+            font-size: 0.9em;
+            color: black;
+            padding: 0px 0px 0px 40px;
+
+        }
+
+        .experience_boxB1 {
+            width: 70vw;
+            height: 100px;
+        }
+
+        .post {
+            font-size: 1.1em;
+            font-weight: 900;
+            color: darkblue;
+            padding: 20px 40px 0px 0px;
+        }
+
+        .post_word {
+            padding: 5px 40px 0px 0px;
+            color: black;
+            font-size: 0.9em;
+        }
+
+        .skills {
+            width: 40vw;
+        }
+
+        .skills_box {
+            width: 40vw;
+            height: 50px;
+            display: flex;
+            justify-content: first baseline;
+        }
+
+        .html,
+        .CSS,
+        .JAVASCRIPT,
+        .PHOTOSHOP,
+        .ILLUSTRATOR,
+        .ADOBEXD {
+            width: 12vw;
+            font-size: 1em;
+            color: black;
+            font-weight: 600;
+            padding: 20px 0px 0px 40px;
+        }
+
+        .html_box,
+        .CSS_box,
+        .JAVASCRIPT_box,
+        .PHOTOSHOP_box,
+        .ILLUSTRATOR_box,
+        .ADOBEXD_box {
+            height: 6px;
+            background: darkblue;
+            margin: 30px 0px 0px 0px;
+        }
+
+        .html_box {
+            width: 24vw;
+            box-shadow: 2vw 0 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .CSS_box {
+            width: 23vw;
+            box-shadow: 3vw 0 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .JAVASCRIPT_box {
+            width: 14vw;
+            box-shadow: 12vw 0 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .PHOTOSHOP_box {
+            width: 21vw;
+            box-shadow: 5vw 0 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .ILLUSTRATOR_box {
+            width: 16vw;
+            box-shadow: 10vw 0 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .ADOBEXD_box {
+            width: 19vw;
+            box-shadow: 7vw 0 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .interest {
+            width: 40vw;
+            height: 180px;
+        }
+
+        .interest_box {
+            width: 40vw;
+            display: flex;
+            justify-content: first baseline;
+            margin: 20px 0px 0px 0px;
+        }
+
+        .interest_icon {
+            font-size: 1.1em;
+            padding: 0px 0px 0px 40px;
+            color: darkblue;
+        }
+
+        .gaming,
+        .singing,
+        .reading,
+        .cooking {
+            position: relative;
+            font-size: 1em;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="parshnal">
+            <div class="contant">
+                <div class="imge"></div>
+                <h1 class="name">krupesh pansara</h1>
+                <p class="profeshan">web developer</p>
+            </div>
+
+            <hr>
+
+            <h1 class="contect">contect info</h1>
+            <ul class="contect_box">
+                <p class="number_box">
+                    <ion-icon name="call-outline" class="info_icon"></ion-icon> 6353871042
+                </p>
+
+                <p class="email_box">
+                    <ion-icon name="mail-outline" class="info_icon"></ion-icon> krupeshpansara22@gmail.com
+                </p>
+
+                <p class="my_saite_box">
+                    <ion-icon name="globe-outline" class="info_icon"></ion-icon> .................
+                </p>
+
+                <p class="my_saite_box">
+                    <ion-icon name="person-outline" class="info_icon"></ion-icon> .................
+                </p>
+
+                <p class="location_box">
+                    <ion-icon name="home-outline" class="info_icon"></ion-icon> Ahemdabad,Gujrat,India
+                </p>
+            </ul>
+
+            <h1 class="education">education</h1>
+
+            <div class="education_box1">
+                <h3 class="education_year">2010-2013</h3>
+                <p class="degree">master degree in computer scince</p>
+                <p class="university">GTU</p>
+            </div>
+
+            <div class="education_box1">
+                <h3 class="education_year">2010-2013</h3>
+                <p class="degree">master degree in computer scince</p>
+                <p class="university">GTU</p>
+            </div>
+
+            <div class="education_box1">
+                <h3 class="education_year">2010-2013</h3>
+                <p class="degree">master degree in computer scince</p>
+                <p class="university">GTU</p>
+            </div>
+
+
+            <h1 class="languages">languages</h1>
+
+            <p class="english">english</p>
+            <div class="languages_box1"></div>
+
+            <p class="spanish">spanish</p>
+            <div class="languages_box2"></div>
+
+            <p class="hindi">hindi</p>
+            <div class="languages_box3"></div>
+
+        </div>
+
+        <!-- -------------------------------------------------  box 2  ----------------------------------------------------------------->
+
+        <div class="info">
+
+            <div class="profail">
+                <h1 class="profile_1">PROFILE</h1>
+                <p class="profile_box1">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore adipisci magnamamet consectetur
+                    adipisicing elit. Dolore adipisci magnam accusamus architecto ducimus doloribus atque debitis non
+                    eligendi,natus minima qui unde, vero quibusdam!
+                </p>
+                <p class="profile_box2">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore adipisci magnam accusamus
+                    architecto ducimus doloribus atque debitis doloribus atque debitis nonipsam asperiores illum
+                </p>
+            </div>
+
+            <div class="experience">
+                <h1 class="experience_1">EXPERIENCE</h1>
+
+                <div class="experience_box1">
+                    <div class="experience_boxA1">
+                        <p class="experience_year">2019-present</p>
+                        <p class="company">company name</p>
+                    </div>
+                    <div class="experience_boxB1">
+                        <p class="post">SENIOR UX DESIGNER</p>
+                        <p class="post_word">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio natus ab
+                            perspiciatis pariatur laboriosam optio recusandae, nobis nam ut tempora.</p>
+                    </div>
+                </div>
+
+                <div class="experience_box1">
+                    <div class="experience_boxA1">
+                        <p class="experience_year">2016-2019</p>
+                        <p class="company">company name</p>
+                    </div>
+                    <div class="experience_boxB1">
+                        <p class="post">UX/UL DESIGNER</p>
+                        <p class="post_word">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio natus ab
+                            perspiciatis pariatur laboriosam optio recusandae, nobis nam ut tempora.</p>
+                    </div>
+                </div>
+
+                <div class="experience_box1">
+                    <div class="experience_boxA1">
+                        <p class="experience_year">2014-2016</p>
+                        <p class="company">company name</p>
+                    </div>
+                    <div class="experience_boxB1">
+                        <p class="post">JUNIOR UX DESIGNER</p>
+                        <p class="post_word">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio natus ab
+                            perspiciatis pariatur laboriosam optio recusandae, nobis nam ut tempora.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills">
+                <h1 class="skills_1">PROFESSIONAL SKILLS</h1>
+                <div class="skills_box">
+                    <div class="html">HTML</div>
+                    <div class="html_box"></div>
+                </div>
+
+                <div class="skills_box">
+                    <div class="CSS">CSS</div>
+                    <div class="CSS_box"></div>
+                </div>
+
+                <div class="skills_box">
+                    <div class="JAVASCRIPT">JAVASCRIPT</div>
+                    <div class="JAVASCRIPT_box"></div>
+                </div>
+
+                <div class="skills_box">
+                    <div class="PHOTOSHOP">PHOTOSHOP</div>
+                    <div class="PHOTOSHOP_box"></div>
+                </div>
+
+                <div class="skills_box">
+                    <div class="ILLUSTRATOR">ILLUSTRATOR</div>
+                    <div class="ILLUSTRATOR_box"></div>
+                </div>
+
+                <div class="skills_box">
+                    <div class="ADOBEXD">ADOBE XD</div>
+                    <div class="ADOBEXD_box"></div>
+                </div>
+            </div>
+
+            <div class="interest">
+                <h1 class="interest_1">INTEREST</h1>
+                <div class="interest_box">
+                    <p class="gaming">
+                        <ion-icon name="game-controller" class="interest_icon"></ion-icon> Gaming
+                    </p>
+                    <p class="singing">
+                        <ion-icon name="mic" class="interest_icon"></ion-icon> Singing
+                    </p>
+                    <p class="reading">
+                        <ion-icon name="book" class="interest_icon"></ion-icon> Reading
+                    </p>
+                    <p class="cooking">
+                        <ion-icon name="restaurant" class="interest_icon"></ion-icon> cooking
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

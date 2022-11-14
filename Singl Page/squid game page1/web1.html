@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0.7), black);
+            height: 95vh;
+        }
+
+        .bg {
+            width: 100vw;
+            height: 90vh;
+            background-image: url('bg.png.jpg');
+            background-size: 100%;
+            position: relative;
+            z-index: -10;
+        }
+
+        .scrin {
+            width: 100vw;
+            height: 90vh;
+            position: relative;
+            background: linear-gradient(45deg, black,black , transparent , transparent);
+        }
+
+        .icon_A {
+            padding: 0px 0px 0px 50px;
+            position: relative;
+            z-index: 10;
+            font-size: 4em;
+            color: white;
+            -webkit-box-reflect: below -15px linear-gradient(transparent, rgba(0, 0, 0, 0.4));
+        }
+
+        .icon_triangle_A {
+            margin: 0px -10px 0px 0px;
+            color: rgb(255, 0, 120);
+        }
+
+        .icon_cricle_A {
+            position: relative;
+            margin: 0px -15px 0px 0px;
+        }
+
+        .name_logo {
+            background-image: url('name_logo.png');
+            width: 500px;
+            height: 250px;
+            background-size: 500px;
+            position: relative;
+            top: 150px;
+        }
+
+        .play {
+            position: relative;
+            left: 5vw;
+            top: 150px;
+            width: 150px;
+            height: 50px;
+            background: rgb(255, 0, 120);
+            font-size: 1.5em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            color: white;
+            font-weight: 900;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .play_icon {
+            padding: 0px 0px 0px 10px;
+        }
+
+        .play:hover {
+            background: white;
+            color: rgb(255, 0, 120);
+        }
+
+        .name {
+            color: rgb(255, 0, 120);
+            font-size: 1.2em;
+            font-weight: 900;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 40px 0px 0px 73px;
+        }
+
+        .play_line {
+            display: flex;
+            justify-content: flex-end;
+            width: 60vw;
+            height: 4px;
+            background: rgba(255, 0, 120);
+            box-shadow: 40vw 0px 0px gray;
+            position: relative;
+        }
+
+        .point {
+            position: relative;
+            right: 0px;
+            width: 12px;
+            height: 12px;
+            top: -4px;
+            background: rgb(255, 0, 120);
+            border-radius: 50%;
+        }
+
+        .bottam_play {
+            position: relative;
+            top: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5em;
+            width: 100vw;
+            height: 8vh;
+        }
+
+        .bottam_icon {
+            color: rgb(255, 0, 120);
+            margin: 0px 20px 0px 20px;
+        }
+
+        .bottam_icon:hover {
+            color: white;
+        }
+        
+        span{
+            color: white;
+            margin: 0px -5px 0px 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg">
+        <div class="scrin">
+
+            <div class="icon_A">
+                <ion-icon name="ellipse-outline" class="icon_cricle_A"></ion-icon>
+                <ion-icon name="triangle-outline" class="icon_triangle_A"></ion-icon>
+                <ion-icon name="square-outline" class="icon_squar_A"></ion-icon>
+            </div>
+            <div class="name"><span> S </span>QUID <span> G </span>AME</div>
+
+            <div class="name_logo"></div>
+
+            <div class="play">
+                PLAY<ion-icon name="play" class="play_icon"></ion-icon>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="play_line">
+        <div class="point"></div>
+    </div>
+    <div class="bottam_play">
+        <ion-icon name="play-back" class="bottam_icon"></ion-icon>
+        <ion-icon name="play-skip-back" class="bottam_icon"></ion-icon>
+        <ion-icon name="play-circle" class="bottam_icon"></ion-icon>
+        <ion-icon name="play-skip-forward" class="bottam_icon"></ion-icon>
+        <ion-icon name="play-forward" class="bottam_icon"></ion-icon>
+    </div>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>

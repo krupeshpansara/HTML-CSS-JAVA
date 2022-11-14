@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            min-height: 200vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .ris{
+            /* border: 1px solid black; */
+            overflow: hidden;
+            height: 150vh;
+            width: calc(60vw - 1px);
+        }
+        .main {
+            height: 150vh;
+            width: 60vw;
+            overflow: hidden;
+        }
+
+        .header {
+            width: 60vw;
+            height: 20vh;
+            background: rgb(1, 1, 59);
+            color: white;
+            position: relative;
+            z-index: 1;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9);
+        }
+
+        .img {
+            height: 170px;
+            width: 170px;
+            background-color: white;
+            border-radius: 50%;
+            position: relative;
+            left: 4vw;
+            top: -5vh;
+            background-image: url('img.png');
+            background-size: 170px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9);
+        }
+
+        h1 {
+            position: relative;
+            left: 27vw;
+            font-size: 3em;
+            top: 3vh;
+        }
+
+        h6 {
+            position: relative;
+            left: 32vw;
+            top: 5vh;
+            font-size: 1em;
+        }
+
+        .main_box {
+            height: 130vh;
+            width: 60vw;
+            display: flex;
+            justify-content: first baseline;
+            overflow: hidden;
+        }
+
+        .left_box {
+            height: 130vh;
+            width: 20vw;
+            background: rgb(183, 239, 247);
+        }
+
+        .my_info {
+            width: 20vw;
+            position: relative;
+            top: 100px;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            padding: 0px 0px 20px 20px;
+            color: rgb(255, 68, 0);
+        }
+
+        .info_icon {
+            font-size: 1.3em;
+            color: rgb(255, 68, 0);
+            font-weight: 900;
+            padding: 0px 10px 0px 0px;
+        }
+
+        .number_box,
+        .email_box,
+        .location_box {
+            padding: 10px 0px 0px 40px;
+        }
+
+        .skill {
+            width: 20vw;
+            position: relative;
+            top: 130px;
+        }
+
+        .HTML,
+        .CSS,
+        .PHOTOSHOP,
+        .JAVASCRIPT {
+            font-size: 0.9em;
+            margin: 0px 0px 0px 40px;
+            font-weight: 700;
+
+        }
+
+        .HTML_box,
+        .CSS_box,
+        .PHOTOSHOP_box,
+        .JAVASCRIPT_box {
+            margin: 5px 0px 10px 40px;
+            height: 4px;
+            background: rgb(255, 68, 0);
+        }
+
+        .HTML_box {
+            width: 14vw;
+            box-shadow: 1vw 0vw 0vw rgba(0, 0, 0, 0.3);
+        }
+
+        .CSS_box {
+            width: 13vw;
+            box-shadow: 2vw 0vw 0vw rgba(0, 0, 0, 0.3);
+        }
+
+        .PHOTOSHOP_box {
+            width: 8vw;
+            box-shadow: 7vw 0vw 0vw rgba(0, 0, 0, 0.3);
+        }
+
+        .JAVASCRIPT_box {
+            width: 10vw;
+            box-shadow: 5vw 0vw 0vw rgba(0, 0, 0, 0.3);
+        }
+
+        .midiya {
+            width: 20vw;
+            position: relative;
+            top: 160px;
+        }
+
+        a {
+            display: block;
+            margin: 0px 0px 10px 40px;
+            font-size: 1em;
+            cursor: pointer;
+            font-weight: 700;
+
+            text-decoration-line: none;
+        }
+
+        a:hover {
+            color: rgb(255, 68, 0);
+        }
+
+        .midiya_icon {
+            padding: 0px 10px 0px 0px;
+            font-size: 1.3em;
+        }
+
+        .languages {
+            width: 20vw;
+            height: 250px;
+            position: relative;
+            top: 180px;
+        }
+
+        .languages_box {
+            width: 20vw;
+            height: 65px;
+            display: flex;
+            justify-content: first baseline;
+        }
+
+        .gujrati,
+        .hindi,
+        .english {
+            position: relative;
+            padding: 14px 0px 0px 40px;
+            font-size: 1.2em;
+            font-weight: 500;
+            width: 15vw;
+        }
+
+        ._box {
+            position: relative;
+            width: 50px;
+            height: 50px;
+            border: 6px solid rgba(0, 0, 0, 0.3);
+            border-radius: 50%;
+        }
+
+        .gujrati_box,
+        .hindi_box,
+        .english_box {
+            font-size: 0.8em;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            position: relative;
+            top: -6px;
+            left: -6px;
+            border: 6px solid black;
+            border-radius: 50%;
+        }
+
+        /* -----------------------------------------box2--------------------------------------------------------------- */
+
+        .right_box{
+            width: 40vw;
+            height: 130vh;
+            background: rgba(0, 149, 255, 0.05);
+        }
+        .about_me , .work{
+            width: 40vw;
+        }
+        h3{
+            font-size: 1.5em;
+            padding: 30px 0px 0px 20px ;
+        }
+        .right_icon{
+            color: rgb(255, 68, 0);
+            padding-right: 10px;
+        }
+        .about_me_box{
+            padding: 15px 20px 0px 55px;
+            font-size: 0.9em;
+        }
+        .work_box{
+            display: flex;
+            justify-content: first baseline;
+        }
+        h4{
+            font-size: 1.1em;
+            font-weight: 900;
+            padding: 20px 0px 0px 55px;
+            width: 400px;
+        }
+        .work_year{
+            font-size: 1em;
+            color: rgb(255, 68, 0);
+            font-weight: 700;
+            position: relative;
+            padding: 20px 0px 0px 50px  ;
+        }
+        .work_boxA{
+            font-size: 1em;
+            font-weight: 700;
+            color: rgba(0, 0, 0 , 0.7);
+            padding: 2px 0px 0px 55px;
+        }
+        .work_boxB{
+            font-size: 0.9em;
+            padding: 2px 30px 0px 55px;
+
+        }
+        .education{
+            width: 40vw;
+        }
+        .colleg_name{
+            display: flex;
+            justify-content: first baseline ;
+        }
+        h5{
+            font-size: 1.1em;
+            padding: 20px 0px 0px 60px ;
+            width: 400px;
+        }
+        .education_year{
+            padding: 20px 0px 0px 60px ;
+            font-weight: 700;
+            color: rgb(255, 68, 0);
+
+        }
+        .education_A{
+            padding: 0px 0px 0px 60px;
+            font-size: 0.9em;
+        }
+        .interest_box{
+            display: flex;
+            justify-content: first baseline;
+            width: 40vw;
+        }
+        .gaming,.singing,.reading,.cooking{
+            padding: 30px 0px 0px 55px;
+            font-size: 1.1em;
+            font-weight: 500;
+        }
+        .interest_icon{
+            font-size: 1.2em;
+            padding: 0px 5px 0px 0px;
+            color: rgb(255, 68, 0);
+        }
+
+    </style>
+</head>
+
+<body>
+<div class="ris">
+    <diiv class="main">
+        <div class="header">
+            <h1>krupesh pansara</h1>
+            <h6>GRAFIC & WEB DESIGNER</h6>
+            <div class="img"></div>
+        </div>
+        <div class="main_box">
+
+            <!-- box-1 -->
+            
+            <div class="left_box">
+                <div class="my_info">
+                    <h2>CONTECT</h2>
+                    <p class="number_box">
+                        <ion-icon name="call-outline" class="info_icon"></ion-icon> 6353871042
+                    </p>
+
+                    <p class="email_box">
+                        <ion-icon name="mail-outline" class="info_icon"></ion-icon> krupeshpansara22@gmail.com
+                    </p>
+
+                    <p class="location_box">
+                        <ion-icon name="home-outline" class="info_icon"></ion-icon> Ahemdabad,Gujrat,India
+                    </p>
+                </div>
+                <div class="skill">
+                    <h2>SKILL</h2>
+                    <p class="HTML">HTML</p>
+                    <div class="HTML_box"></div>
+
+                    <p class="CSS">CSS</p>
+                    <div class="CSS_box"></div>
+
+                    <p class="PHOTOSHOP">PHOTOSHOP</p>
+                    <div class="PHOTOSHOP_box"></div>
+
+                    <p class="JAVASCRIPT">JAVASCRIPT</p>
+                    <div class="JAVASCRIPT_box"></div>
+                </div>
+                <div class="midiya">
+                    <h2>FOLLOW ME</h2>
+
+                    <a href="#">
+                        <ion-icon name="logo-linkedin" class="midiya_icon"></ion-icon> linkedin.com/username
+                    </a>
+
+                    <a href="#">
+                        <ion-icon name="logo-facebook" class="midiya_icon"></ion-icon> facebook.com/username
+                    </a>
+
+                    <a href="#">
+                        <ion-icon name="logo-twitter" class="midiya_icon"></ion-icon> twitter.com/username
+                    </a>
+
+                </div>
+                <div class="languages">
+                    <h2>LANGUAGES</h2>
+
+                    <div class="languages_box">
+                        <p class="gujrati">Gujrati</p>
+                        <div class="_box">
+                            <div class="gujrati_box">100%</div>
+                        </div>
+                    </div>
+
+                    <div class="languages_box">
+                        <p class="hindi">Hindi</p>
+                        <div class="_box">
+                            <div class="hindi_box">100%</div>
+                        </div>
+                    </div>
+
+                    <div class="languages_box">
+                        <p class="english">English</p>
+                        <div class="_box">
+                            <div class="english_box">100%</div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!-- box-2 -->
+
+            <div class="right_box">
+                <div class="about_me">
+                    <h3>
+                        <ion-icon name="person" class="right_icon"></ion-icon>ABOUT ME
+                    </h3>
+                    <p class="about_me_box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id officia fuga
+                        perspiciatis illo, libero obcaecati odit ex, architecto sit asperiores placeat expedita possimus
+                        accusamus ea. Minus enim tenetur in maxime! Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Nostrum, fugiat?</p>
+                </div>
+
+                <div class="work">
+                    <h3>
+                        <ion-icon name="briefcase" class="right_icon"></ion-icon>WORK EXPERIENCE
+                    </h3>
+
+                    <div class="work_box">
+                        <h4> LEAD WEB DESIGNER </h4>
+                        <p class="work_year">2004-2007</p>
+                    </div>
+                    <div class="work_boxA">silliconANGLEMedia,inc</div>
+                    <p class="work_boxB">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi at repellat
+                        eius non cumque corrupti est earum eligendi soluta quis?</p>
+
+                    <div class="work_box">
+                        <h4> SENIOR WEB DESIGNER </h4>
+                        <p class="work_year">2007-2011</p>
+                    </div>
+                    <div class="work_boxA">Crowdchat</div>
+                    <p class="work_boxB">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi at repellat
+                        eius non cumque corrupti est earum eligendi soluta quis?</p>
+
+                    <div class="work_box">
+                        <h4> UI/UX DESIGNER </h4>
+                        <p class="work_year">2011-Presant</p>
+                    </div>
+                    <div class="work_boxA">Forbes</div>
+                    <p class="work_boxB">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi at repellat
+                        eius non cumque corrupti est earum eligendi soluta quis?</p>
+                </div>
+
+                <div class="education">
+                    <h3>
+                        <ion-icon name="newspaper" class="right_icon"></ion-icon> EDUCATION
+                    </h3>
+
+                    <div class="colleg_name">
+                        <h5>GUJRAT TEC.</h5>
+                        <p class="education_year">2001-2004</p>
+                    </div>
+                    <p class="education_A">GTU computer scince </p>
+
+                    <div class="colleg_name">
+                        <h5>GUJRAT TEC.</h5>
+                        <p class="education_year">2001-2004</p>
+                    </div>
+                    <p class="education_A">GTU computer scince </p>
+
+                    <div class="colleg_name">
+                        <h5>GUJRAT TEC.</h5>
+                        <p class="education_year">2001-2004</p>
+                    </div>
+                    <p class="education_A">GTU computer scince </p>
+                </div>
+
+                <div class="interest">
+                    <h3 class="interest_1"><ion-icon name="logo-buffer" class="right_icon"></ion-icon>INTEREST</h3>
+                    <div class="interest_box">
+                        <p class="gaming">
+                            <ion-icon name="game-controller" class="interest_icon"></ion-icon> Gaming
+                        </p>
+                        <p class="singing">
+                            <ion-icon name="mic" class="interest_icon"></ion-icon> Singing
+                        </p>
+                        <p class="reading">
+                            <ion-icon name="book" class="interest_icon"></ion-icon> Reading
+                        </p>
+                        <p class="cooking">
+                            <ion-icon name="restaurant" class="interest_icon"></ion-icon> cooking
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </diiv>
+</div>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

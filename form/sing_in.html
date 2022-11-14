@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leacher 1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: url("../form/imge/img1.png");
+        }
+        .form{
+            width: 400px;
+            height: 560px;
+            background: rgba(255,255,255,0.3);
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.1),
+            5px 5px 25px rgba(0,0,0,0.3);
+            border: 3px solid rgba(255,255,255,0.8);
+            border-bottom-color: rgba(0,0,0,0.1) ;
+            border-right-color: rgba(0,0,0,0.1) ;
+        }
+        h1{
+            font-weight: 500;
+            margin: 20px 0px 30px 20px;
+        }
+        form{
+            margin-left: 20px;
+        }
+        p{
+            color: rgba(0,0,0,0.6);
+            font-size: 0.9em;
+            font-weight: 900;
+            margin-bottom: 10px;
+        }
+        .number{
+            margin-top: 20px;
+        }
+        #select{
+            margin-right: 10px; 
+            height: 27px;
+            border: 2px solid transparent;
+            border-bottom-color: rgba(0,0,0,0.4);
+            background: transparent;
+            color: rgba(0,0,0,0.6);
+        }
+        .btn{
+            width: 94%;
+            margin-top: 35px;
+            height: 40px;
+            font-size: 1em;
+            color: white;
+            background: red;
+            border-color: transparent ;
+        }
+        .btn:active{
+            background: rgb(167, 0, 0);
+        }
+        input{
+            background: transparent;
+            outline: none;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="form">
+        <h1>Sign Up</h1>
+            <form action="sign_up.js" method="get">
+                <p>i am</p>
+                <div style="display: flex;">
+                    <div style="padding-right: 35px; align-items: center; display: flex;">
+                        <input type="radio" name="uGender" class = "radio_btn" style="margin-right: 10px; width: 15px; height: 15px;">Buyer/Owner
+                    </div>
+                    <div style="padding-right:35px; align-items: center; display: flex;">
+                        <input type="radio" name="uGender" class = "radio_btn" style="margin-right: 10px; width: 15px; height: 15px;">Agent
+                    </div>
+                    <div style="padding-right:35px; align-items: center; display: flex;">
+                        <input type="radio" name="uGender" class = "radio_btn" style="margin-right: 10px; width: 15px; height: 15px;">Builder
+                    </div>
+                </div>
+
+                <div style="margin-top: 20px;">
+                    <input type="text" name="uName" id="" placeholder="Name" style="width: 94%;  border: 2px solid transparent; border-bottom: 2px solid rgba(0,0,0,0.4); height: 27px;">
+                </div>
+                <div style="margin-top: 30px;">
+                    <input type="email" name="uEmail" id="" placeholder="Email" style="width: 94%;  border: 2px solid transparent; border-bottom: 2px solid rgba(0,0,0,0.4); height: 27px;">
+                </div>
+                <div style="margin-top: 30px;">
+                    <input type="password" name="uPassword" id="" placeholder="Password" style="width: 94%;  border: 2px solid transparent; border-bottom: 2px solid rgba(0,0,0,0.4); height: 27px;">
+                </div>
+
+                <div class="number" >
+                    <select name="Number" id="select">
+                        <option value="IND +9">IND +91</option>
+                        <option value="">US +1</option>
+                        <option value="">CA +73</option>
+                        <option value="">Pa +22</option>
+                        <option value="">AU +42</option>
+                        <option value="">CHA +82</option>
+                        <option value="">UK +67</option>
+                        <option value="">JA +2</option>
+                        <option value="">UAE +48</option>
+                        <option value="">AA +2</option>
+                    </select>
+                    <input type="tel" name="teliphonNumber" id="" placeholder="Number" style="width: 69%;  border: 2px solid transparent; border-bottom: 2px solid rgba(0,0,0,0.4); height: 27px;">
+                </div>
+
+                <div style="font-size: 0.9em; margin-top: 30px; align-items: center;">
+                    <input type="checkbox" name="agriment" id="" style="width: 12px; height: 12px;">
+                    <label for="agriment" style="margin-right: 10px;">I want to receive important updates on Whatsapp</label>
+                </div>
+
+                <div style="font-size: 0.9em; margin-top: 15px; margin-right: 20px;">
+                    <input type="checkbox" name="agriment" id="" style="width: 12px; height: 12px;">
+                    <label for="agriment" style="font-weight: 900; margin-right: 10px;">I agree to Magicbricks <u>T&C </u> <u> Privacy Policy </u> & <u> Cookie Policy</u></label>
+                </div>
+
+                <div>
+                    <input type="submit" value="Sign Up" class="btn" >
+                </div>
+
+                <div style="margin-top: 10px; text-align: center; font-size: 0.9em; margin-left: -20px;">
+                    Already registered? <a href="log_in.html" style="color: rgb(206, 4, 4); font-weight: 500;">Login Now</a>
+                </div>
+            </form>
+    </div>
+</body>
+
+</html>

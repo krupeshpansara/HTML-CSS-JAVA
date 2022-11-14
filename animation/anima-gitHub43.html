@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: o;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: white;
+            display: flex;
+            min-height: 97vh;
+            align-items: center;
+            justify-content: center;
+        }
+
+       
+
+        .drop {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.4),
+                inset -50px -50px 150px white,
+                inset 20px 20px 50px rgba(0, 0, 0,0.5);
+        }
+
+        .drop::after {
+            content: '';
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: white;
+            position: absolute;
+            top: 60px;
+            left: 20px;
+        }
+
+        .drop::before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: white;
+            position: absolute;
+            top: 40px;
+            left: 50px;
+        }
+
+        .icon {
+            font-size: 5em;
+            color: rgba(0, 0, 0, 0.8);
+        }
+        p {
+            font-family: 'Open Sans', sans-serif;
+            color: rgba(0, 0, 0, 0.8);
+        }
+
+        .drop_box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 300px;
+
+            position: absolute;
+
+            /* remove coment  */
+
+            /* position: relative; */
+            /* top: 150px; */
+            /* left: 200px; */
+
+        }
+
+        .d {
+            margin-right: 50px;
+            font-size: 7em;
+        }
+
+        .r {
+            margin-right: 50px;
+            font-size: 7em;
+        }
+
+        .p {
+            margin-left: 50px;
+            font-size: 7em;
+        }
+        .apple{
+            height: 250px ;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 60px;
+        }
+        .apple::before{
+            content: '';
+            width: 120px;
+            height: 130px;
+            background: white;
+            position: absolute;
+            bottom: 85px;
+            left: 447.4px;
+            z-index: 1;
+        }
+        .apple::after{
+            content: '';
+            width: 120px;
+            height: 130px;
+            background: white;
+            position: absolute;
+            bottom: 85px;
+            left: 223.5px;
+            z-index: 1;
+        }
+        .apple p{
+            font-size: 13em;
+        }
+        .a{
+            margin-right: 70px;
+        }
+        .p1,.p2{
+            margin-right: 100px;
+            position: relative;
+            top: -50px;
+        }
+        .l{
+            margin-right: 70px;
+        }
+        .e{
+            margin-right: 0px;
+        }
+        .drop_smol_A{
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            z-index: 2;
+            top: 10px;
+            right: 338px;
+        }
+        .drop_smol_B{
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            z-index: 2;
+            top: 10px;
+            right: 561px;
+        }
+        .drop_smol_A::after , .drop_smol_B::after{
+            width: 20px;
+            height: 20px;
+            background: white;
+            top: 40px;
+            left: 18px;
+        }
+        .drop_smol_A::before , .drop_smol_B::before{
+            width: 8px;
+            height: 8px;
+            background: white;
+            top: 23px;
+            left: 40px;
+        }
+        .icon_smol{
+            font-size: 3.5em;
+        }
+        .tex{
+            position: absolute;
+            top: 5vh;
+            left: 5vh;
+            font-weight: 500;
+            border-bottom: 3px solid black;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+
+    <!-- Remove All Comment -->
+
+
+
+    <!-- <div class="apple">
+        <p class="a">A</p>
+        <p class="p1">p</p>
+        <div class="drop_smol_A drop">
+            <ion-icon name="logo-apple" class="icon_smol icon"></ion-icon>
+        </div>
+        <p class="p2">p</p>
+        <div class="drop drop_smol_B">
+            <ion-icon name="logo-apple" class="icon icon_smol"></ion-icon>
+        </div>
+        <p class="l">L</p>
+        <p class="e">E</p>
+    </div> -->
+
+    <div class="drop_box">
+        <p class="d">D</p>
+        <p class="r">r</p>
+        <div class="drop">
+            <ion-icon name="logo-apple" class="icon"></ion-icon>
+        </div>
+        <p class="p">p</p>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+</body>
+
+</html>

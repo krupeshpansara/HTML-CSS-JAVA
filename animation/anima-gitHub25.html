@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .box{
+            background: black;
+            height: 250px;
+            width: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            z-index: -2;
+            bottom: 300px;
+            -webkit-box-reflect: below 0 linear-gradient(transparent 30%, black);
+
+        }
+         span{
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: transparent;
+        }
+         span:nth-child(1){
+            border-radius: 30% 70% 63% 37% / 30% 30% 70% 70% ;
+            animation: box 5s linear infinite;
+            border: 1px solid rgb(255, 93, 93);
+        }
+         span:nth-child(2){
+            border-radius: 72% 28% 53% 47% / 67% 65% 35% 33%  ;
+            animation: box 5s linear infinite reverse;
+            border: 1px solid rgb(107, 255, 93);
+
+        }
+         span:nth-child(3){
+            border-radius: 33% 67% 34% 66% / 66% 68% 32% 34%   ;
+            animation: box 3s linear infinite;
+            border: 1px solid rgb(93, 193, 255);
+
+        }
+        @keyframes box {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+    
+        h1{
+            position: absolute;
+            z-index: -2;
+            color: white; 
+        }
+        @keyframes loding {
+            0%{
+                
+            }
+            100%{
+                left: 114px;
+            }
+        }
+        .a{
+            position: relative;
+            z-index: -1 ;
+            background: black;
+            width: 100px;
+            height: 45px;
+            left: 82px;
+            animation: loding 3s steps(4) infinite forwards ;
+        }
+        @keyframes loding {
+            0%{
+                left: 82px;
+            }
+            100%{
+                left: 114px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <span></span>
+        <span></span>
+        <span></span>
+        
+        <h1>loding...</h1>
+        <span class="a"></span>
+           
+    </div>
+</body>
+</html>
